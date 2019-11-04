@@ -1,35 +1,21 @@
 <template>
-  <div class="todo-container">
-    <div class="todo-wrap">
-      <Header/>
-      <List/>
-      <Footer/>
-    </div>
+  <div class="container">
+    <Search/>
+    <Main/> 
   </div>
 </template>
 <script>
-import Header from './components/Header'
-import List from './components/List'
-import Footer from './components/Footer'
+import Search from './components/Search'
+import Main from './components/Main'
 export default {
   name: 'App',
   components:{
-    Header,
-    List,
-    Footer
+    Search,
+    Main
   }
 }
 </script>
 
 <style>
-  .todo-container {
-  width: 600px;
-  margin: 0 auto;
-  }
-  .todo-container .todo-wrap {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
+  
 </style>
