@@ -10,52 +10,49 @@
 
 <script type="text/ecmascript-6">
   export default {
-     name: 'Item',
-      props:{
-       todo:{
-         type:Object,
-         required:true
-       },
-        updateTodo:{
-        type:Function,
-      },
-        deleteTodo:Function
-       
-     },
-     data(){
-       return {
-         bgColor: '#fff',
-         isShow: false
-       }
-     },
+    name: 'Item',
+    props:{
+    todo:{
+      type:Object,
+      required:true
+    },
+    updateTodo:Function,
+    deleteTodo:Function
+    },
+    data(){
+      return {
+        bgColor: '#fff',
+        isShow: false
+      }
+    },
   
-     computed:{
-       isCheck:{
-         get(){
+    computed:{
+      isCheck:{
+        get(){
           return this.todo.comolete
-         },
-         set(value){
-          this.updateTodo(this.todo, value)
-         }
-       }
-     },
-    methods:{
-       handleEnter (isEnter) {
-        if (isEnter) { // 移入
-          this.bgColor = '#cccccc'
-          this.isShow = true
-        } else { // 移出
-          this.bgColor = '#fff'
-          this.isShow = false
-        }
-      },
-      deleteItem(){
-        if (confirm('确定删除吗?')) {
-        //  console.log('this.todo.id', this.todo.id)
-          this.deleteTodo(this.todo.id)
+        },
+        set(value){
+        this.updateTodo(this.todo, value)
         }
       }
+    },
+  methods:{
+      handleEnter (isEnter) {
+      if (isEnter) { // 移入
+        this.bgColor = '#cccc'
+        this.isShow = true
+      } else { // 移出
+        this.bgColor = '#fff'
+        this.isShow = false
+      }
+    },
+    deleteItem(){
+      if (confirm('确定删除吗?')) {
+      //  console.log('this.todo.id', this.todo.id)
+        this.deleteTodo(this.todo.id)
+      }
     }
+  }
   }
 </script>
 
