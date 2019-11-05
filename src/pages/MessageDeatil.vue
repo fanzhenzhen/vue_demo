@@ -24,8 +24,7 @@
       console.log('Detail mounted()')
       setTimeout(() => {
         const id = this.id * 1
-        const detail = allDetails.find(detail => detail.id===id)
-        this.detail = detail
+        this.detail = allDetails.find(detail => detail.id===id)
       }, 100);
     },
 
@@ -34,8 +33,7 @@
       $route (value) {
         setTimeout(() => {
           const id = value.params.id * 1
-          const detail = allDetails.find(detail => detail.id===id)
-          this.detail = detail
+          this.detail = allDetails.find(detail => detail.id===id)
         }, 1000);
       }
     }
