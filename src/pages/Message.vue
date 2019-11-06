@@ -34,9 +34,6 @@
     },
     methods:{
      pushShow (id) {
-
-        console.log('先执行一些逻辑处理')
-
         // this.$router.push('/home/message/detail/' + id)
         // this.$router.push({path: '/home/message/detail/' + id})
         this.$router.push({name: 'detail', params: {id}})
